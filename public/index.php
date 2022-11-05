@@ -36,7 +36,7 @@ $purple5 = "#2b0245";
         <div class="float-right text-white mr-5"><p>YOURNAME</p></div>
     </div>
     <?= $separator ?>
-    <div class="flow-root convert text-white text-2xl ">
+    <div class="flow-root text-white text-2xl ">
         <div class="float-left ml-5">UNITÉ</div>
         <div class="absolute right-2/4 translate-x-1/2"><=></div>
         <div class="float-right mr-5">UNITÉ</div>
@@ -56,17 +56,18 @@ $purple5 = "#2b0245";
     </div>
     <?= $separator ?>
 
-    <div class="mx-5 text-2xl h-9 text-[<?= $purple1 ?>] ">
+    <div class="mx-5 text-2xl text-[<?= $purple1 ?>] ">
         <div class="w-full bg-[<?= $purple2 ?>] border-2 border-[<?= $purple3 ?>] rounded rounded-full flow-root"><span
                     class="ml-2 float-left"><?= $search_unit ?></span><span class="float-right mr-2"><i
                         class="fa-solid fa-magnifying-glass"></i></span>
         </div>
-        <div class="w-10/12 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] absolute left-1/2 -translate-x-1/2"><span
+        <div class="mx-3 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] "><span
                     class="ml-2"><?= $result1_unit ?></span></div>
-        <div class="w-10/12 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] absolute mt-9 left-1/2 -translate-x-1/2 rounded-b-lg"><span
+        <div class="mx-3 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] rounded-b-lg "><span
                     class="ml-2"><?= $result2_unit ?></span></div>
 
     </div>
+
     <?= $separator ?>
 </div>
 </body>
