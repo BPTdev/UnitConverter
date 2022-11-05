@@ -1,3 +1,19 @@
+<?php
+require_once 'components.php';
+$unit1 = " M";
+$unit2 = "CM";
+
+$search_unit = "FAMILLES";
+$result1_unit = "METRIQUE";
+$result2_unit = "MASSE";
+
+//colors
+$purple1 = "#da6cdd";
+$purple2 = "#933ea4";
+$purple3 = "#72076e";
+$purple4 = "#490456";
+$purple5 = "#2b0245";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +21,7 @@
     <title>Acceuil</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/0398e3de48.js" crossorigin="anonymous"></script>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
 </head>
@@ -15,30 +32,42 @@
         <p class="logo-purple float-right mr-10">2</p>
     </div>
     <div class="flow-root name text-2xl mt-10">
-        <div class="float-left ml-5"><p>BONJOUR</p></div>
-        <div class="float-right mr-5"><p>YOURNAME</p></div>
+        <div class="float-left text-white ml-5"><p>BONJOUR</p></div>
+        <div class="float-right text-white mr-5"><p>YOURNAME</p></div>
     </div>
-    <div class="mx-5 separator"><hr class="text-white"></div>
-    <div class="flow-root convert text-white text-2xl mt-2">
+    <?= $separator ?>
+    <div class="flow-root convert text-white text-2xl ">
         <div class="float-left ml-5">UNITÉ</div>
         <div class="absolute right-2/4 translate-x-1/2"><=></div>
         <div class="float-right mr-5">UNITÉ</div>
     </div>
     <div class="flow-root convert text-white text-2xl mt-2">
-        <form action="#" >
+        <form action="#">
             <div class="flow-root">
-            <div class="float-left ml-5 w-2/5"> <input type="text" class="w-full rounded bg-[#933ea4] border- 4border-[#490456]"></div>
-            <div class="float-right mr-5 w-2/5"><input type="text" class="w-full"></div>
-        </div>
+                <div class="float-left ml-5 w-2/5"><input type="text"
+                                                          class="w-full text-[<?= $purple5 ?>] h-16 rounded bg-[<?= $purple3 ?>] border-2 border-[<?= $purple2 ?>] text-right pr-10"><span
+                            style="margin-left:-35px;" class="text-[<?= $purple5 ?>]"><?= $unit1 ?></span></div>
+
+                <div class=" float-right mr-5 w-2/5"><input type="text"
+                                                            class="w-full text-[<?= $purple5 ?>] h-16 rounded bg-[<?= $purple3 ?>] border-2 border-[<?= $purple2 ?>] text-right pr-10"><span
+                            style="margin-left:-45px;" class="text-[<?= $purple5 ?>]"><?= $unit2 ?></span></div>
+            </div>
         </form>
     </div>
-    <div class="flow-root title">
-        <div class="float-left ml-5"></div>
-        <div class="float-right mr-5"></div>
-    </div>
-    <div class="content">
+    <?= $separator ?>
+
+    <div class="mx-5 text-2xl h-9 text-[<?= $purple1 ?>] ">
+        <div class="w-full bg-[<?= $purple2 ?>] border-2 border-[<?= $purple3 ?>] rounded rounded-full flow-root"><span
+                    class="ml-2 float-left"><?= $search_unit ?></span><span class="float-right mr-2"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="w-10/12 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] absolute left-1/2 -translate-x-1/2"><span
+                    class="ml-2"><?= $result1_unit ?></span></div>
+        <div class="w-10/12 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] absolute mt-9 left-1/2 -translate-x-1/2 rounded-b-lg"><span
+                    class="ml-2"><?= $result2_unit ?></span></div>
 
     </div>
+    <?= $separator ?>
 </div>
 </body>
 </html>
