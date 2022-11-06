@@ -1,62 +1,77 @@
-.font-family{
+.font-family {
     font-family: neon, sans-serif;
 }
-@font-face  {
+
+@font-face {
     font-family: neon;
-    src: url(/fonts/Neon.ttf)format('truetype');
+    src: url(/fonts/Neon.ttf) format('truetype');
 }
+
 @font-face {
     font-family: porsche;
     src: url(/fonts/911porschav3.ttf);
 }
+
 @font-face {
     font-family: avengers;
     src: url(/fonts/avengers.ttf);
 }
+
 @font-face {
     font-family: blade-runner;
     src: url(/fonts/BLADRMF.ttf);
 }
+
 @font-face {
     font-family: back-to-the-future;
     src: url(/fonts/BTTF.ttf);
 }
+
 @font-face {
     font-family: christmas;
     src: url(/fonts/CHRISTMAS.otf);
 }
-@font-face  {
+
+@font-face {
     font-family: cs;
     src: url(/fonts/cs_regular.ttf);
 }
+
 @font-face {
     font-family: squids;
     src: url(/fonts/Squids.ttf);
 }
+
 @font-face {
     font-family: space;
     src: url(/fonts/space.ttf);
 }
+
 @font-face {
     font-family: spooky;
     src: url(/fonts/Spooky.ttf);
 }
+
 @font-face {
     font-family: starcraft;
     src: url(/fonts/Starcraft.ttf);
 }
+
 @font-face {
     font-family: starjedi;
     src: url(/fonts/Starjedi.ttf);
 }
+
 @font-face {
     font-family: tesla;
     src: url(/fonts/TESLA.ttf);
 }
+
 @font-face {
     font-family: transformers;
     src: url(/fonts/Transformers.ttf);
 }
+
 @font-face {
     font-family: valorant;
     src: url(/fonts/Valorant.ttf);
