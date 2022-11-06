@@ -22,11 +22,33 @@ $purple5 = "#2b0245";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0398e3de48.js" crossorigin="anonymous"></script>
+    <script src="js/js.js"></script>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
 </head>
 <body>
+<div id="menu"
+     class="menu absolute z-30 h-[30%] pb-10 bg-white w-full rounded rounded-b-xl text-2xl text-center">
+    <div class="absolute right-0 mr-6 mt-4 ">
+        <i id="cross" class="fa-solid fa-xmark"></i>
+    </div>
+    <form action="admin.php">
+        <div class="mx-5 mt-14"><input
+                    class="w-full text-white bg-[<?= $purple3 ?>] rounded border-2 border-[<?= $purple4 ?>]"
+                    type="text"
+                    placeholder="INDENTIFIANT"></div>
+        <div class="mx-5 mt-5"><input
+                    class="w-full text-white bg-[<?= $purple3 ?>] rounded border-2 border-[<?= $purple4 ?>]"
+                    type="text"
+                    placeholder="MOT DE PASSE"></div>
+        <div class="mx-5 mt-10 text-right"><input
+                    class=" text-white w-full bg-[<?= $purple3 ?>] rounded border-2 border-[<?= $purple4 ?>]"
+                    type="submit" value="SE CONNECTER"></div>
+    </form>
+</div>
+
 <div class="text-7xl font-family flex-wrap mb-100">
+    <!-- Header -->
     <div class="flow-root title">
         <p class="logo-purple font-bold float-left ml-10">
             <span class="absolute left-0 ml-10 blur-lg text-white opacity-40">UC</span>
@@ -34,17 +56,15 @@ $purple5 = "#2b0245";
             <span class="UC">UC</span>
         </p>
         <div class="logo-purple float-right mr-10 text-xl">
-            <a href="#">
-                <p class="absolute ">.</p>
-                <p class="absolute top-1">.</p>
-                <p class="absolute top-2">.</p>
-            </a>
+            <i id="bars" class="fa-solid fa-bars absolute top-6"></i>
         </div>
     </div>
+    <!-- Welcome Area -->
     <div class="flow-root name text-2xl mt-10">
         <div class="float-left text-white ml-5"><p>BONJOUR</p></div>
-        <div class="float-right text-white mr-5"><p>YOURNAME</p></div>
+        <div class="float-right text-white mr-5"><p>GUY PARMELIN</p></div>
     </div>
+    <!-- Converter -->
     <?= $separator ?>
     <div class="flow-root text-white text-2xl ">
         <div class="float-left ml-5">UNITÉ</div>
@@ -65,7 +85,7 @@ $purple5 = "#2b0245";
         </form>
     </div>
     <?= $separator ?>
-
+    <!-- Search -->
     <div class="mx-5 text-2xl text-[<?= $purple1 ?>] ">
         <div class="w-full bg-[<?= $purple2 ?>] border-2 border-[<?= $purple3 ?>] rounded rounded-full flow-root"><span
                     class="ml-2 float-left"><?= $search_unit ?></span><span class="float-right mr-2"><i
@@ -75,10 +95,9 @@ $purple5 = "#2b0245";
                     class="ml-2"><?= $result1_unit ?></span></div>
         <div class="mx-3 bg-[<?= $purple4 ?>] border-2 border-[<?= $purple3 ?>] rounded-b-lg "><span
                     class="ml-2"><?= $result2_unit ?></span></div>
-
     </div>
-
     <?= $separator ?>
+    <!-- Units -->
     <div class="mx-5 text-2xl">
         <div class="text-white ">UNITÉS</div>
         <div class="flow-root">
@@ -115,11 +134,9 @@ $purple5 = "#2b0245";
         </div>
     </div>
     <?= $separator ?>
-    <!--
-
--->
 
 
+    <!-- Popular -->
     <div class="mx-5 text-2xl text-white">
         <div class=" ">POPULAIRES</div>
         <div class="flow-root">

@@ -1,5 +1,4 @@
-:root
-{
+:root {
     /*
      Colors
     */
@@ -20,6 +19,11 @@ body {
     Common styles
 */
 
-.logo-purple{
+.logo-purple {
     color: var(--purple-1);
+}
+
+.menu {
+
+    transform: translateY(-101%);
 }
