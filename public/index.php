@@ -26,10 +26,20 @@ $purple5 = "#2b0245";
     <link href="/css/fonts.css" rel="stylesheet">
 </head>
 <body>
-<div class="text-7xl font-family flex-wrap">
+<div class="text-7xl font-family flex-wrap mb-100">
     <div class="flow-root title">
-        <p class="logo-purple float-left ml-10">1</p>
-        <p class="logo-purple float-right mr-10">2</p>
+        <p class="logo-purple font-bold float-left ml-10">
+            <span class="absolute left-0 ml-10 blur-lg text-white opacity-40">UC</span>
+            <span class="absolute left-0 ml-10 blur-sm text-white opacity-25">UC</span>
+            <span class="UC">UC</span>
+        </p>
+        <div class="logo-purple float-right mr-10 text-xl">
+            <a href="#">
+                <p class="absolute ">.</p>
+                <p class="absolute top-1">.</p>
+                <p class="absolute top-2">.</p>
+            </a>
+        </div>
     </div>
     <div class="flow-root name text-2xl mt-10">
         <div class="float-left text-white ml-5"><p>BONJOUR</p></div>
