@@ -1,12 +1,35 @@
+@import url(fonts/Neon.ttf);
+@import url(fonts/avengers.ttf);
+@import url(fonts/BTTF.ttf);
+@import url(fonts/CHRISTMAS.otf);
+@import url(fonts/Spooky.ttf);
+@import url(fonts/cs_regular.ttf);
+@import url(fonts/Squids.ttf);
+@import url(fonts/space.ttf);
+@import url(fonts/Starcraft.ttf);
+@import url(fonts/Starjedi.ttf);
+@import url(fonts/TESLA.ttf);
+@import url(fonts/Transformers.ttf);
+@import url(fonts/Valorant.ttf);
 
+.neon {    font-family: "Neon";}
+.avengers {    font-family: "avengers";}
+.bttf {    font-family: "BTTF";}
+.christmas {    font-family: "CHRISTMAS";}
+.cs {    font-family: "cs_regular";}
+.squids {    font-family: "Squids";}
+.spaceF {    font-family: "space";}
+.spooky {    font-family: "Spooky";}
+.starcraft {    font-family: "Starcraft";}
+.starjedi {    font-family: "Starjedi";}
+.tesla {    font-family: "TESLA";}
+.transformers {    font-family: "Transformers";}
+.valorant {    font-family: "Valorant";}
 
-body {
-    font-family: "back-to-the-future", sans-serif;
-}
 
 @font-face {
     font-family: "neon";
-    src: url(fonts/Neon.ttf) format('truetype');
+    src: url(fonts/Neon.ttf) ;
 }
 
 
@@ -17,7 +40,7 @@ body {
 
 
 @font-face {
-    font-family: "back-to-the-future";
+    font-family: "BTTF";
     src: url(fonts/BTTF.ttf);
 }
 

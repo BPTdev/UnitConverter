@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
+    fonts = ["neon","avengers","bttf","christmas","cs","squids","spaceF","spooky","starcraft","starjedi","tesla","transformers","valorant"];
+    fonttoapply = "neon";
     sessionStorage.setItem("playaudio", "false");
     bars = document.getElementById('bars');
     cross = document.getElementById('cross');
@@ -11,13 +13,22 @@ function init() {
 
     //universal stuff
     toggle_universal = document.getElementById('toggle-universal');
-    if (localStorage .getItem("playaudio")==="true") {
+    if (localStorage.getItem("playaudio")==="true") {
         toggle_universal.checked = true;
     }
     toggle_universal.addEventListener('change',universal)
 
     //font stuff
     toggle_font = document.getElementById('toggle-font');
+    toggle_font.addEventListener('change',randomfonts)
+    if (localStorage.getItem("randomfont")==="true") {
+        toggle_font.checked = true;
+        console.log("random font")
+        //get a random element of the fonts array
+        fonttoapply = fonts[Math.floor(Math.random()*fonts.length)]
+    }
+    document.body.classList.add(fonttoapply);
+
 }
 //universal stuff
 function universal() {
@@ -27,9 +38,7 @@ function universal() {
     if (localStorage.getItem("playaudio")==="true"){
         menu.classList.add('menu-transition');
         localStorage.setItem("playaudio", "false");
-
     }else{
-
         menu.classList.remove('menu-transition-universal');
         localStorage.setItem("playaudio", "true");
         menu.classList.toggle('menu');
@@ -37,7 +46,13 @@ function universal() {
 
 }
 function randomfonts() {
-    fonts = ["neon","avengers","back-to-the-future","christmas","cs","squids","spaceF","spooky","starcraft","starjedi","tesla","transformers","valorant"];
+    if (localStorage.getItem("randomfont")==="true"){
+        localStorage.setItem("randomfont", "false");
+
+    }else{
+        localStorage.setItem("randomfont", "true");
+    }
+    window.location.reload();
 }
 function menuOpen() {
 

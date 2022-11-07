@@ -27,8 +27,9 @@ $color5 = "#2b0245";
     <script src="js/js.js"></script>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="neon">
 <div id="menu"
      class="menu menu-transition absolute z-30 h-[30%] pb-10 bg-white w-full rounded rounded-b-xl text-2xl text-center">
     <div class="absolute right-0 mr-6 mt-4 ">
