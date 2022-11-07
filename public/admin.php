@@ -1,7 +1,7 @@
 <?php
 require 'components.php';
 $units = ['MM', "CM", "DM", "M", "DAM", "HM", "KM"];
-$families = ['MÈTRES', "MASSE", "VITESSE", "FORCE", "CHALEUR", "LUMIÈRE", "ÉNÉRGIE"];
+$families = ['METRES', "MASSE", "VITESSE", "FORCE", "CHALEUR", "LUMIERE", "ÉNÉRGIE"];
 
 
 $search_unit = "FAMILLES";
