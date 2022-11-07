@@ -1,6 +1,7 @@
 <?php
 
 require_once 'components.php';
+require_once 'colors.php';
 $units = ['MM', "CM", "DM", "M", "DAM", "HM", "KM"];
 
 
@@ -9,11 +10,27 @@ $result1_unit = "METRIQUE";
 $result2_unit = "MASSE";
 
 //colors
-$color1 = "#da6cdd";
-$color2 = "#933ea4";
-$color3 = "#72076e";
-$color4 = "#490456";
-$color5 = "#2b0245";
+
+if (isset($_POST['colors'])){
+    $post_color = $_POST['colors']['toggle_colors'];
+}
+if ($post_color){
+    $color0 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+    $color1 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+    $color2 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+    $color3 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+    $color4 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+    $color5 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
+}else {
+    $color0 = "#FFFFFF";
+    $color1 = "#da6cdd";
+    $color2 = "#933ea4";
+    $color3 = "#72076e";
+    $color4 = "#490456";
+    $color5 = "#2b0245";
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -29,9 +46,10 @@ $color5 = "#2b0245";
     <link href="/css/fonts.css" rel="stylesheet">
 
 </head>
-<body class="neon">
+<body class="neon bg-[<?= $color5 ?>]">
 <div id="menu"
-     class="menu menu-transition absolute z-30 h-[30%] pb-10 bg-white w-full rounded rounded-b-xl text-2xl text-center">
+     class="menu menu-transition absolute z-30 h-[30%] pb-10 bg-[<?= $color0 ?>] w-full rounded rounded-b-xl text-2xl
+      text-center">
     <div class="absolute right-0 mr-6 mt-4 ">
         <i id="cross" class="fa-solid fa-xmark"></i>
     </div>
@@ -56,11 +74,20 @@ $color5 = "#2b0245";
                 </label>
             </div>
             <div id="toggle2">
-                <label for="toggle-font" class=" flex items-center cursor-pointer relative mb-4">
+                <label for="toggle-font" class=" flex items-center cursor-pointer relative mb-4 mr-2">
                     <input type="checkbox" id="toggle-font" class="sr-only">
                     <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
                     <span class="ml-3  text-sm font-medium">MYSTERE</span>
                 </label>
+            </div>
+            <div id="toggle3">
+                <form action="index.php" id="formColors" method="post">
+                <label for="toggle-colors" class=" flex items-center cursor-pointer relative mb-4">
+                    <input type="checkbox" name="toggle_colors" id="toggle-colors" class="sr-only">
+                    <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
+                    <span class="ml-3  text-sm font-medium">MYSTERE</span>
+                </label>
+                </form>
             </div>
         </div>
     </form>
@@ -69,12 +96,12 @@ $color5 = "#2b0245";
 <div class="text-7xl  flex-wrap mb-100">
     <!-- Header -->
     <div class="flow-root title">
-        <p class="logo-purple font-bold float-left ml-10">
+        <p class="text-[<?= $color1 ?>] font-bold float-left ml-10">
             <span class="absolute left-0 ml-10 blur-lg text-white opacity-40">UC</span>
             <span class="absolute left-0 ml-10 blur-sm text-white opacity-25">UC</span>
             <span class="UC">UC</span>
         </p>
-        <div class="logo-purple float-right mr-10 text-xl">
+        <div class="text-[<?= $color1 ?>] float-right mr-10 text-xl">
             <i id="bars" class="fa-solid fa-bars absolute top-6"></i>
         </div>
     </div>

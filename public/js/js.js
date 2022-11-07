@@ -29,6 +29,19 @@ function init() {
     }
     document.body.classList.add(fonttoapply);
 
+
+
+
+    //colors stuff
+    toggle_colors = document.getElementById('toggle-colors');
+    toggle_colors.addEventListener('change',randomcolors)
+    if (localStorage.getItem("randomcolors")==="true") {
+        toggle_colors.checked = true;
+        console.log("Random Colors");
+
+
+    }
+
 }
 //universal stuff
 function universal() {
@@ -53,6 +66,15 @@ function randomfonts() {
         localStorage.setItem("randomfont", "true");
     }
     window.location.reload();
+}
+function randomcolors(){
+    if (localStorage.getItem("randomcolors")==="true"){
+        localStorage.setItem("randomcolors", "false");
+
+    }else{
+        localStorage.setItem("randomcolors", "true");
+    }
+    document.getElementById("formsColors").submit();
 }
 function menuOpen() {
 

@@ -1,28 +1,3 @@
-:root {
-    /*
-     Colors
-    */
-    --purple-1: #da6cdd;
-    --purple-2: #933ea4;
-    --purple-3: #490456;
-    --purple-4: #2b0245;
-    --white-1: white;
-    --border-color: var(--white-1);
-}
-
-
-body {
-    background-color: var(--purple-4);
-}
-
-/*
-    Common styles
-*/
-
-.logo-purple {
-    color: var(--purple-1);
-}
-
 .menu {
 
     transform: translateY(-101%);
