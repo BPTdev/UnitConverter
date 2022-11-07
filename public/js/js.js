@@ -11,19 +11,27 @@ function init() {
 
     //universal stuff
     toggle_universal = document.getElementById('toggle-universal');
+    if (localStorage .getItem("playaudio")==="true") {
+        toggle_universal.checked = true;
+    }
     toggle_universal.addEventListener('change',universal)
+
+    //font stuff
+    toggle_font = document.getElementById('toggle-font');
 }
 //universal stuff
 function universal() {
     console.log("Universal Toggled")
     menu.classList.toggle('menu-transition');
     menu.classList.toggle('menu-transition-universal');
-    if (sessionStorage.getItem("playaudio")==="true"){
-        sessionStorage.setItem("playaudio", "false");
+    if (localStorage.getItem("playaudio")==="true"){
+        menu.classList.add('menu-transition');
+        localStorage.setItem("playaudio", "false");
+
     }else{
 
         menu.classList.remove('menu-transition-universal');
-        sessionStorage.setItem("playaudio", "true");
+        localStorage.setItem("playaudio", "true");
         menu.classList.toggle('menu');
     }
 
@@ -39,9 +47,9 @@ function menuOpen() {
 
 
     //universal stuff
-    if (sessionStorage.getItem("playaudio")==="true"){
+    if (localStorage.getItem("playaudio")==="true"){
         menu.classList.add('menu-transition-universal');
-        console.log(sessionStorage.getItem("playaudio"));
+        console.log(localStorage.getItem("playaudio"));
         var audio = new Audio('js/univers/Universal_Intro.mp3');
         audio.play();
     }
@@ -53,8 +61,8 @@ function menuClose() {
     menu.classList.toggle('menu');
 
     //universal stuff
-    if (sessionStorage.getItem("playaudio")==="true"){
-        console.log(sessionStorage.getItem("playaudio"));
+    if (localStorage.getItem("playaudio")==="true"){
+        console.log(localStorage.getItem("playaudio"));
         var audio = new Audio('js/univers/Universal_Intro_reverse.mp3');
         audio.play();
     }

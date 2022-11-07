@@ -46,7 +46,7 @@ $color5 = "#2b0245";
                 <label for="toggle-universal" class=" flex items-center cursor-pointer relative mb-4">
                     <input type="checkbox" id="toggle-universal" class="sr-only">
                     <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
-                    <span class="ml-3  text-sm font-medium">Toggle universal</span>
+                    <span class="ml-3  text-sm font-medium">MYSTERE</span>
                 </label>
             </div>
         </div>

@@ -1,4 +1,5 @@
 <?php
+
 require_once 'components.php';
 $units = ['MM', "CM", "DM", "M", "DAM", "HM", "KM"];
 
@@ -22,7 +23,7 @@ $color5 = "#2b0245";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0398e3de48.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css"/>
     <script src="js/js.js"></script>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
@@ -45,13 +46,20 @@ $color5 = "#2b0245";
         <div class="mx-5 mt-6 text-right"><input
                     class=" text-white w-full bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"
                     type="submit" value="SE CONNECTER"></div>
-        <div id="toggles" class="mx-5 mt-5 w-max">
-            <div class="">
-            <label for="toggle-universal" class=" flex items-center cursor-pointer relative mb-4">
-                <input type="checkbox" id="toggle-universal" class="sr-only">
-                <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
-                <span class="ml-3  text-sm font-medium">Toggle universal</span>
-            </label>
+        <div id="toggles" class="mx-5 mt-5 w-max flex flex-row">
+            <div id="toggle1">
+                <label for="toggle-universal" class=" flex items-center cursor-pointer relative mb-4 mr-2">
+                    <input type="checkbox" id="toggle-universal" class="sr-only">
+                    <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
+                    <span class="ml-3  text-sm font-medium">MYSTERE</span>
+                </label>
+            </div>
+            <div id="toggle2">
+                <label for="toggle-font" class=" flex items-center cursor-pointer relative mb-4">
+                    <input type="checkbox" id="toggle-font" class="sr-only">
+                    <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
+                    <span class="ml-3  text-sm font-medium">MYSTERE</span>
+                </label>
             </div>
         </div>
     </form>
@@ -115,13 +123,17 @@ $color5 = "#2b0245";
                 <div class="text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>] rounded-t-lg">
                     <span><?= $units[0] ?></span>
                 </div>
-                <?php for ($i = 1;
-                           $i < 6;
-                           $i++) { ?>
+                <?php
+                for (
+                    $i = 1;
+                    $i < 6;
+                    $i++
+                ) { ?>
                     <div class="-mt-1 text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>]">
                         <span><?= $units[$i] ?></span>
                     </div>
-                <?php } ?>
+                <?php
+                } ?>
                 <div class="-mt-1 text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>] rounded-b-lg">
                     <span><?= $units[6] ?></span>
                 </div>
@@ -130,13 +142,17 @@ $color5 = "#2b0245";
                 <div class="text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>] rounded-t-lg">
                     <span><?= $units[0] ?></span>
                 </div>
-                <?php for ($i = 1;
-                           $i < 6;
-                           $i++) { ?>
+                <?php
+                for (
+                    $i = 1;
+                    $i < 6;
+                    $i++
+                ) { ?>
                     <div class="-mt-1 text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>]">
                         <span><?= $units[$i] ?></span>
                     </div>
-                <?php } ?>
+                <?php
+                } ?>
                 <div class="-mt-1 text-[<?= $color1 ?>] bg-[<?= $color2 ?>] border-2 border-[<?= $color3 ?>] rounded-b-lg">
                     <span><?= $units[6] ?></span>
                 </div>
@@ -151,20 +167,28 @@ $color5 = "#2b0245";
         <div class=" ">POPULAIRES</div>
         <div class="flow-root">
             <div class="float-left w-6/12 pr-5">
-                <?php for ($j = 0;
-                           $j <= 3;
-                           $j++) { ?>
+                <?php
+                for (
+                    $j = 0;
+                    $j <= 3;
+                    $j++
+                ) { ?>
                     <div class="mt-2 text-center bg-[<?= $color3 ?>] border-2 border-[<?= $color2 ?>] rounded "><?= $units[3] ?>
                         <=> <?= $units[6] ?></div>
-                <?php } ?>
+                <?php
+                } ?>
             </div>
             <div class="float-right w-6/12 pl-5">
-                <?php for ($j = 0;
-                           $j <= 3;
-                           $j++) { ?>
+                <?php
+                for (
+                    $j = 0;
+                    $j <= 3;
+                    $j++
+                ) { ?>
                     <div class="mt-2 text-center bg-[<?= $color3 ?>] border-2 border-[<?= $color2 ?>] rounded "><?= $units[3] ?>
                         <=> <?= $units[6] ?></div>
-                <?php } ?>
+                <?php
+                } ?>
             </div>
 
         </div>
