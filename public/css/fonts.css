@@ -1,9 +1,11 @@
-.font-family {
-    font-family: neon, sans-serif;
+@import url(/fonts/Neon.ttf);
+
+body {
+    font-family: "neon", serif;
 }
 
 @font-face {
-    font-family: neon;
+    font-family: "neon";
     src: url(/fonts/Neon.ttf) format('truetype');
 }
 

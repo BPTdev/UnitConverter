@@ -5,17 +5,11 @@ function init() {
     cross = document.getElementById('cross');
     menu = document.getElementById('menu');
 
-    bars.addEventListener('click', menuOpen)
-    cross.addEventListener('click', menuClose)
+    bars.addEventListener('click', menuOpenClose)
+    cross.addEventListener('click', menuOpenClose)
 }
 
-function menuOpen() {
-    //remove the hidden class to menu element
-    menu.classList.remove('menu');
-}
-
-function menuClose() {
-
-    //add the hidden class from menu element
-    menu.classList.add('menu');
+function menuOpenClose() {
+    //toggle the menu class to menu element
+    menu.classList.toggle('menu');
 }

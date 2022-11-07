@@ -27,3 +27,9 @@ body {
 
     transform: translateY(-101%);
 }
+
+.menu-transition {
+    transition: all;
+    transition-duration: 21s;
+    transition-timing-function: ease-in;
+}
