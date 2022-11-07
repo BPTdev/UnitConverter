@@ -22,6 +22,7 @@ $color5 = "#2b0245";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/0398e3de48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
     <script src="js/js.js"></script>
     <link href="/css/general.css" rel="stylesheet">
     <link href="/css/fonts.css" rel="stylesheet">
@@ -41,9 +42,18 @@ $color5 = "#2b0245";
                     class="w-full text-white bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"
                     type="password"
                     placeholder="MOT DE PASSE"></div>
-        <div class="mx-5 mt-10 text-right"><input
+        <div class="mx-5 mt-6 text-right"><input
                     class=" text-white w-full bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"
                     type="submit" value="SE CONNECTER"></div>
+        <div id="toggles" class="mx-5 mt-5 w-max">
+            <div class="">
+            <label for="toggle-universal" class=" flex items-center cursor-pointer relative mb-4">
+                <input type="checkbox" id="toggle-universal" class="sr-only">
+                <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
+                <span class="ml-3  text-sm font-medium">Toggle universal</span>
+            </label>
+            </div>
+        </div>
     </form>
 </div>
 

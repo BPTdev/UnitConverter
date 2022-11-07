@@ -30,6 +30,11 @@ body {
 
 .menu-transition {
     transition: all;
-    transition-duration: 21s;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+}
+.menu-transition-universal {
+    transition: all;
+    transition-duration: 20s;
     transition-timing-function: ease-in;
 }
