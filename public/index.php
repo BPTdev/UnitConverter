@@ -39,7 +39,7 @@ $color5 = "#2b0245";
                     placeholder="INDENTIFIANT"></div>
         <div class="mx-5 mt-5"><input
                     class="w-full text-white bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"
-                    type="text"
+                    type="password"
                     placeholder="MOT DE PASSE"></div>
         <div class="mx-5 mt-10 text-right"><input
                     class=" text-white w-full bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"

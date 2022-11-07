@@ -29,7 +29,7 @@ $purple5 = "#2b0245";
 </head>
 <body>
 <div id="menu"
-     class="menu absolute z-30 h-[15%] pb-10 bg-white w-full rounded rounded-b-xl text-2xl text-center">
+     class="menu menu-transition absolute z-30 h-[15%] pb-10 bg-white w-full rounded rounded-b-xl text-2xl text-center">
     <div class="absolute right-0 mr-6 mt-4 ">
         <i id="cross" class="fa-solid fa-xmark"></i>
     </div>
