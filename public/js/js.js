@@ -29,17 +29,12 @@ function init() {
     }
     document.body.classList.add(fonttoapply);
 
-
-
-
     //colors stuff
     toggle_colors = document.getElementById('toggle-colors');
     toggle_colors.addEventListener('change',randomcolors)
     if (localStorage.getItem("randomcolors")==="true") {
         toggle_colors.checked = true;
         console.log("Random Colors");
-
-
     }
 
 }
@@ -70,18 +65,20 @@ function randomfonts() {
 function randomcolors(){
     if (localStorage.getItem("randomcolors")==="true"){
         localStorage.setItem("randomcolors", "false");
+        sessionStorage.setItem("a", "false");
+        alert("Random Colors Disabled");
 
     }else{
         localStorage.setItem("randomcolors", "true");
+        sessionStorage.setItem('a', "true");
+        alert("Random Colors Enabled");
     }
-    document.getElementById("formsColors").submit();
+    window.location.reload();
 }
 function menuOpen() {
 
     //toggle the menu class to menu element
     menu.classList.toggle('menu');
-
-
 
     //universal stuff
     if (localStorage.getItem("playaudio")==="true"){

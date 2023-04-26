@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once 'components.php';
 require_once 'colors.php';
 $units = ['MM', "CM", "DM", "M", "DAM", "HM", "KM"];
@@ -11,10 +11,14 @@ $result2_unit = "MASSE";
 
 //colors
 
-if (isset($_POST['colors'])){
-    $post_color = $_POST['colors']['toggle_colors'];
+if (isset($_SESSION['toggle-colors'])){
+    $post_color = $_POST['toggle-colors'];
 }
-if ($post_color){
+echo session_status();
+    echo '<script>alert('.$_SESSION['a'].')</script>';
+    echo '<script>console.log('.session_status().')</script>';
+
+if ($_SESSION['a'] === "true"){
     $color0 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
     $color1 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
     $color2 = '#' . str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT);
@@ -29,7 +33,6 @@ if ($post_color){
     $color4 = "#490456";
     $color5 = "#2b0245";
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -47,12 +50,14 @@ if ($post_color){
 
 </head>
 <body class="neon bg-[<?= $color5 ?>]">
+
 <div id="menu"
      class="menu menu-transition absolute z-30 h-[30%] pb-10 bg-[<?= $color0 ?>] w-full rounded rounded-b-xl text-2xl
       text-center">
     <div class="absolute right-0 mr-6 mt-4 ">
         <i id="cross" class="fa-solid fa-xmark"></i>
     </div>
+
     <form action="admin.php">
         <div class="mx-5 mt-14"><input
                     class="w-full text-white bg-[<?= $color3 ?>] rounded border-2 border-[<?= $color4 ?>]"
@@ -81,9 +86,9 @@ if ($post_color){
                 </label>
             </div>
             <div id="toggle3">
-                <form action="index.php" id="formColors" method="post">
+                <form action="index.php" id="formColors" >
                 <label for="toggle-colors" class=" flex items-center cursor-pointer relative mb-4">
-                    <input type="checkbox" name="toggle_colors" id="toggle-colors" class="sr-only">
+                    <input type="checkbox" name="toggle-colors" id="toggle-colors" class="sr-only">
                     <div class="toggle-bg bg-[<?= $color3 ?>] border-2  h-6 w-11 rounded-full"></div>
                     <span class="ml-3  text-sm font-medium">MYSTERE</span>
                 </label>
